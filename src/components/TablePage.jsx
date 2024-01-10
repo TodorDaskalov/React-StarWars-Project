@@ -27,7 +27,7 @@ const TablePage = () => {
             {loading ? (
                 <div className={styles.spinner}></div>
             ) : (
-                <>
+                <div className={styles.mainContainer}>
                     <h1>Star Wars Characters</h1>
                     <table className={styles.tableContainer}>
                         <thead>
@@ -51,7 +51,7 @@ const TablePage = () => {
                             ))}
                         </tbody>
                     </table>
-                </>
+                </div>
             )}
         </div>
     );
