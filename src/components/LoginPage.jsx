@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
@@ -15,6 +17,8 @@ const LoginPage = () => {
         }));
     };
 
+    const navigate = useNavigate();
+
     const isFormValid = () => {
         return (
             formData.username.trim() !== "" && formData.password.trim() !== ""
@@ -28,7 +32,8 @@ const LoginPage = () => {
             return;
         }
 
-        console.log("Form submitted:", formData);
+        navigate("/table")
+        
     };
 
     return (
