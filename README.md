@@ -34,19 +34,21 @@ This project is a React application that features a responsive login form and a 
 ## Project Structure
 
 React-StarWars-Project/
-├── src/
-│   ├── components/
-│   │   ├── LoginPage.jsx
-│   │   ├── LoginPage.module.css
-│   │   ├── TablePage.jsx
-│   │   └── TablePage.module.css
-│   ├── App.jsx
-│   ├── App.css
-│   └── main.jsx
-├── index.html
-├── .gitignore
-├── package.json
-├── README.md
+|-- src/
+|   |-- components/
+|   |   |-- LoginPage.jsx
+|   |   |-- LoginPage.module.css
+|   |   |-- TablePage.jsx
+|   |   `-- TablePage.module.css
+|   |-- App.jsx
+|   |-- App.css
+|   `-- main.jsx
+|-- public/
+|   |-- index.html
+|-- .gitignore
+|-- package.json
+|-- README.md
+
 
 
 
