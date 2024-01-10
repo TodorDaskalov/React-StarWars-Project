@@ -33,7 +33,7 @@ This project is a React application that features a responsive login form and a 
 
 ## Project Structure
 
-## Project Structure
+# React-StarWars-Project
 
 - **src/**
   - **components/**
@@ -45,8 +45,7 @@ This project is a React application that features a responsive login form and a 
   - App.css
   - main.jsx
 
-- **public/**
-  - index.html
+- **index.html**
 
 - **.gitignore**
 - **package.json**
