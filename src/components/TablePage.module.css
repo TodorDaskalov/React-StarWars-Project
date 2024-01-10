@@ -34,10 +34,34 @@ tbody tr {
     color: white;
 }
 
+tbody tr:hover {
+    background-color: rgba(104, 104, 104, 0.5);
+    cursor: pointer;
+}
+
 tbody td {
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #ddd;
     color: white;
     padding: 0.625rem;
     text-align: left;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
