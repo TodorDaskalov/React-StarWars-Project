@@ -5,15 +5,20 @@ import styles from "./TablePage.module.css";
 const TablePage = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch("https://swapi.dev/api/people");
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
                 const responseData = await response.json();
                 setData(responseData.results);
             } catch (error) {
                 console.error("Error fetching data:", error);
+                setError("The Force is not with you at the moment. Please try again later.");
             } finally {
                 setLoading(false);
             }
@@ -26,6 +31,8 @@ const TablePage = () => {
         <div>
             {loading ? (
                 <div className={styles.spinner}></div>
+            ) : error ? (
+                <p className={styles.error}>{error}</p>
             ) : (
                 <div className={styles.mainContainer}>
                     <h1>Star Wars Characters</h1>
