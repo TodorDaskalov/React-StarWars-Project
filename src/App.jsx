@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import LoginPage from "./components/LoginPage";
 import TablePage from "./components/TablePage";
+import "./App.css";
 
 function App() {
     return (

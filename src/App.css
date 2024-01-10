@@ -1,0 +1,33 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("https://wallpaperset.com/w/full/5/e/7/1456.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }    
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }    
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 10px;
+    }    
+}
