@@ -41,8 +41,11 @@ This project is a React application that features a responsive login form and a 
     - LoginPage.module.css
     - TablePage.jsx
     - TablePage.module.css
+  - **services/**
+    - charactersService.js
   - App.jsx
   - App.css
+  - appPaths.js
   - main.jsx
 
 - **index.html**
