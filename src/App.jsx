@@ -1,16 +1,21 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Path from "./appPaths";
 
 import LoginPage from "./components/LoginPage";
 import TablePage from "./components/TablePage";
+
 import "./App.css";
 
 function App() {
     return (
         <>
-            <Routes>
-                <Route path="/" element={<LoginPage />} />
-                <Route path="/table" element={<TablePage />} />
-            </Routes>
+            <BrowserRouter>
+                <Routes>
+                    <Route path={Path.Home} element={<LoginPage />} />
+                    <Route path={Path.TablePage} element={<TablePage />} />
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }
