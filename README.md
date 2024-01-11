@@ -50,3 +50,18 @@ This project is a React application that features a responsive login form and a 
 - **.gitignore**
 - **package.json**
 - **README.md**
+
+## Installation
+
+To run this Vite project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/TodorDaskalov/React-StarWars-Project.git
+
+2. Navigate to the project directory
+
+3. Install dependencies: npm install
+
+4. Run the development server: npm run dev
