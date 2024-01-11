@@ -64,8 +64,8 @@ To run this Vite project locally, follow these steps:
 
 3. Install dependencies
   ```bash
-  npm install
+   npm install
 
 4. Run the development server
   ```bash
-  npm run dev
+   npm run dev
