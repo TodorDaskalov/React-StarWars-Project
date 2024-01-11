@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getCharacters } from "../services/charactersService";
 
 import styles from "./TablePage.module.css";
 
@@ -8,23 +9,15 @@ const TablePage = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("https://swapi.dev/api/people");
-                if (!response.ok) {
-                    throw new Error("Failed to fetch data");
-                }
-                const responseData = await response.json();
-                setData(responseData.results);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-                setError("The Force is not with you at the moment. Please try again later.");
-            } finally {
+        getCharacters()
+            .then((charactersData) => {
+                setData(charactersData);
                 setLoading(false);
-            }
-        };
-
-        fetchData();
+            })
+            .catch((error) => {
+                setError(error.message);
+                setLoading(false);
+            });
     }, []);
 
     return (
