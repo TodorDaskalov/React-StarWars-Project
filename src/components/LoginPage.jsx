@@ -1,9 +1,14 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+import Path from "../appPaths"
 
 import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
+    
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         username: "",
         password: "",
@@ -16,8 +21,6 @@ const LoginPage = () => {
             [name]: value,
         }));
     };
-
-    const navigate = useNavigate();
 
     const isFormValid = () => {
         return (
@@ -32,7 +35,7 @@ const LoginPage = () => {
             return;
         }
 
-        navigate("/table")
+        navigate(`${Path.TablePage}`)
         
     };
 
